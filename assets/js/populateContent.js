@@ -127,6 +127,7 @@ function Certificates(){
                             <a href="${certificate.pathCertificate}"
                                 target="_blank" class="image fit">
                                 <img src="${certificate.pathImage}"/>
+                                </a>
                             <p class="description">
                                 ${certificate.description}
                             </p>
