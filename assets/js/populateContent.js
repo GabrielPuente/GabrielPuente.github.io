@@ -24,10 +24,10 @@ class Certificate {
 function Career(){
 
     const careerItau = new Carrer("Engenheiro de Software", "Itau", "04/2022 - Atual", "Especialista em back-end, utilizando serviços da AWS como: ECS, Fargate, EC2, S3, Lambda, CloudFront, API Gateway, DynamoDB, RDS e etc. Desenvolvimento em .net legados e modernos. Buscando otimização de custos com desempenho e aplicações tolerantes a falhas.");
-    const carrerThunders = new Carrer("Engenheiro de Software", "Thunders", "11/2020 - 04/2022", "Arquitetura em Microservices. NET Core. Arquitetura de mensageria com RabbitMQ. SOLID, CQRS, DDD. Mediator, Command Pattern. Docker, Azure DevOps. Banco de dados: SQL Server e MySQL. ORM: Entity Framework e Dapper.");
+    const carrerThunders = new Carrer("Engenheiro de Software", "Thunders", "11/2020 - 04/2022", "Arquitetura em Microservices. NET Core. Arquitetura de mensageria com RabbitMQ. SOLID, CQRS, DDD. Mediator e Command Pattern. Docker e Azure DevOps. Banco de dados: SQL Server e MySQL. ORM: Entity Framework e Dapper.");
     const carrerAmaris = new Carrer("Desenvolvedor .Net", "Amaris", "08/2020 - 11/2020", "Desenvolvimento e sustentação de sistemas feitos com ASP .Net Core WebApi, ASP.Net Core MVC, Javascript, Entity Framework e SQL Server.");
     const carrerNetza = new Carrer("Desenvolvedor .Net", "Netza", "02/2020 – 08/2020", "Desenvolvimento e sustentação de sistemas feitos com ASP .Net Core WebApi, ASP.Net Core MVC, Javascript, Entity Framework e SQL Server.");
-    const carrerVm2 = new Carrer("Desenvolvedor .Net Jr", "Agência VM2", "07/2018 - 02/2020", "Desenvolvimento e sustentação de sistemas feitos com ASP.Net Web Forms, ASP.NET MVC, Javascript /Jquery e SQL Server, HTML5 e CSS3.");
+    const carrerVm2 = new Carrer("Desenvolvedor .Net Junior", "Agência VM2", "07/2018 - 02/2020", "Desenvolvimento e sustentação de sistemas feitos com ASP.Net Web Forms, ASP.NET MVC, Javascript /Jquery e SQL Server, HTML5 e CSS3.");
     const carrerInforware = new Carrer("Estagio", "Inforware Informática", "03/2018 - 07/2018", "Suporte tecnico para cliente final com a plataforma de software desenvolvida pela empresa para controle de estoque, com foco principal no cliente de varejo.");
 
     var careerList = [];
