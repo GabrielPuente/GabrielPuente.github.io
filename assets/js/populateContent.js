@@ -1,6 +1,7 @@
 function Populate(){
     Career();
     Certificates();
+    Badges();
 }
 
 class Carrer {
@@ -19,6 +20,15 @@ class Certificate {
         this.description = description;
     }
 }
+
+class Badge {
+    constructor(pathImage, pathCertificate, description) {
+        this.pathImage = pathImage;
+        this.pathCertificate = pathCertificate;
+        this.description = description;
+    }
+}
+
 
 
 function Career(){
@@ -148,4 +158,55 @@ function Certificates(){
             <br />`;
 
     document.getElementById("certificates-content").innerHTML = html;
+}
+
+function Badges(){
+
+    const softwareSolutionFoudation = new Badge("\images\\badges\\Arquitetura-de-Soluções-Foundation.png", "http://badges.com.br/share/af86a75e3c65ed62d37a95b6ebffe458.php?a=2149", "Temas abordados como Estratégias de Cloud, uso de DDD, Observability, App projetado para evoluir e tolerancias a falhas, telemetria e segurança de dados.");
+    const dataModelling = new Badge("\images\\badges\\Data-modelling.png", "http://badges.com.br/share/c585b0681d6800e45254389816dd7503.php?a=3710", "Orgulho de ter tirado este badge, me possibilitou emancipar meu time no tema de modelagem de dados logica, possibilitando maior autonomia do time, uma trilha completa sobre modelagem de dados com o uso do power desing e estrategias usadas pela empresa.");
+    const businessAnalyticsPractitioner = new Badge("\images\\badges\\Practitioner-Business-Analytics.png", "http://badges.com.br/share/7979ac304cc91e0d6c447b356f770080.php?a=5220","Conceitos iniciais sobre analista de negócios, ponderamento de riscos e benefícios das decisões, projetar cenarios pensando no cliente e no negócio.");
+    const DaFoundationPractitioner = new Badge("\images\\badges\\Practitioner-D&A-Foundation.png", "http://badges.com.br/share/ec17e03b08bcd9631ff85de16b393cc5.php?a=3694", "Introdução sobre conceitos a dados, Engenharia de Dados, Modelagem de Dados, Ciência de Dados e Governança de Dados. Toda a cadeia de analytics que envolve o processo de entrega de valor por meio de dados, e as possibilidades de uso de dados nas organizações.");
+    const DaLeadershipPractitioner = new Badge("\images\\badges\\Practitioner-Leadership-D&A.png", "http://badges.com.br/share/d631647638a296d43cc8144fc47b3ee2.php?a=3706", "Introdução a cultura data-driven e data-centric, Cultura de Dados, Estrutura de Gestão, Papéis e Responsabilidades no ciclo do dado. Sobre como dados podem ser utilizados para gerar valor para organizações");
+
+    var badges = [];
+
+    badges.push(dataModelling);
+    badges.push(softwareSolutionFoudation);
+    badges.push(DaLeadershipPractitioner);
+    badges.push(DaFoundationPractitioner);
+    badges.push(businessAnalyticsPractitioner);
+
+    let html = `<header><h2>Badges</h2></header>`;
+    let cont = 0;
+
+    badges.forEach(badge => {
+        if(cont == 0)
+            html += `<div class="row">`;
+
+        html += `<div class="col-4 col-12-mobile">
+                        <article class="item card">
+                            <a href="${badge.pathCertificate}"
+                                target="_blank" class="image fit">
+                                <img id="img-badge" src="${badge.pathImage}"/>
+                                </a>
+                            <p class="description">
+                                ${badge.description}
+                            </p>
+                        </article>
+                    </div>`;
+
+        cont++;
+        
+        if(cont == 3)
+        {
+            html += "</div> <br />"
+            cont = 0
+        }
+
+    });
+
+    html += `</div>
+            <br />`;
+
+    document.getElementById("badges-content").innerHTML = html;
 }
